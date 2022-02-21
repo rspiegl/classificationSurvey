@@ -1,0 +1,10 @@
+untruePic0.jpg 0
+untruePic1.jpg 0
+untruePic2.jpg 0
+untruePic3.jpg 0
+untruePic4.jpg 0
+truePic0.jpg 1
+truePic1.jpg 1
+truePic2.jpg 1
+truePic3.jpg 1
+truePic4.jpg 1

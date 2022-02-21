@@ -1,0 +1,745 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1170</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Humans vs CNNs</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(186, 189, 182);</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="1" column="1">
+     <widget class="QListWidget" name="listPicturesFalse">
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>532</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(186, 189, 182);
+gridline-color: rgb(0, 0, 0);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>256</width>
+        <height>256</height>
+       </size>
+      </property>
+      <property name="viewMode">
+       <enum>QListView::IconMode</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0">
+     <widget class="QListWidget" name="listPicturesTrue">
+      <property name="maximumSize">
+       <size>
+        <width>800</width>
+        <height>532</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">gridline-color: rgb(0, 0, 0);
+background-color: rgb(186, 189, 182);</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::Box</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Plain</enum>
+      </property>
+      <property name="lineWidth">
+       <number>2</number>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="selectionMode">
+       <enum>QAbstractItemView::NoSelection</enum>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>256</width>
+        <height>256</height>
+       </size>
+      </property>
+      <property name="viewMode">
+       <enum>QListView::IconMode</enum>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QWidget" name="widgetPic" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>360</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="picLeft">
+         <property name="maximumSize">
+          <size>
+           <width>512</width>
+           <height>512</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="picShow">
+         <property name="minimumSize">
+          <size>
+           <width>512</width>
+           <height>512</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>512</width>
+           <height>512</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Panel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="text">
+          <string>ImageLabel</string>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="picRight">
+         <property name="minimumSize">
+          <size>
+           <width>512</width>
+           <height>512</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>512</width>
+           <height>512</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="2" column="0" colspan="2">
+     <widget class="QWidget" name="widgetButtons" native="true">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>45</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QPushButton" name="pushButtonTrue">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Shortcut: Left Arrow</string>
+         </property>
+         <property name="text">
+          <string>Category 1</string>
+         </property>
+         <property name="shortcut">
+          <string>Left</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="descriptionLabel">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>360</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Welcome!</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButtonFalse">
+         <property name="maximumSize">
+          <size>
+           <width>100</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="toolTip">
+          <string>Shortcut: Right Arrow</string>
+         </property>
+         <property name="text">
+          <string>Category 2</string>
+         </property>
+         <property name="shortcut">
+          <string>Right</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionSelectDirectory"/>
+    <addaction name="actionConnect_EyeTracker"/>
+    <addaction name="actionReset"/>
+    <addaction name="actionRestart"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuDatasets">
+    <property name="title">
+     <string>Chessboard</string>
+    </property>
+    <widget class="QMenu" name="menuCamera_Rotation">
+     <property name="title">
+      <string>Camrot</string>
+     </property>
+     <addaction name="actionCamRot_5"/>
+     <addaction name="actionCamRot_1"/>
+    </widget>
+    <widget class="QMenu" name="menuRandom_Board_Images">
+     <property name="title">
+      <string>Ranboaima</string>
+     </property>
+     <addaction name="actionRanBoa_5"/>
+     <addaction name="actionRanBoa_1"/>
+    </widget>
+    <widget class="QMenu" name="menuRotated_Images">
+     <property name="title">
+      <string>Rotima</string>
+     </property>
+     <addaction name="actionRotIm_5"/>
+     <addaction name="actionRotIm_1"/>
+    </widget>
+    <addaction name="menuRandom_Board_Images"/>
+    <addaction name="menuCamera_Rotation"/>
+    <addaction name="menuRotated_Images"/>
+   </widget>
+   <widget class="QMenu" name="menuSVRT">
+    <property name="title">
+     <string>SVRT</string>
+    </property>
+    <addaction name="actionSVRT_1"/>
+    <addaction name="actionSVRT_19"/>
+    <addaction name="actionSVRT_20"/>
+    <addaction name="actionSVRT_21"/>
+   </widget>
+   <widget class="QMenu" name="menuPSVRT">
+    <property name="title">
+     <string>PSVRT</string>
+    </property>
+    <addaction name="actionPSVRT_SR"/>
+    <addaction name="actionPSVRT_SD"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuPSVRT"/>
+   <addaction name="menuSVRT"/>
+   <addaction name="menuDatasets"/>
+  </widget>
+  <action name="actionSelectDirectory">
+   <property name="text">
+    <string>Select Dataset</string>
+   </property>
+  </action>
+  <action name="actionReset">
+   <property name="text">
+    <string>Reset</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionCamRot_1">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionCamRot_5">
+   <property name="text">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actionRanBoa_1">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionRanBoa_5">
+   <property name="text">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actionRotIm_1">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionRotIm_5">
+   <property name="text">
+    <string>5</string>
+   </property>
+  </action>
+  <action name="actionSVRT_1">
+   <property name="text">
+    <string>1</string>
+   </property>
+  </action>
+  <action name="actionSVRT_19">
+   <property name="text">
+    <string>19</string>
+   </property>
+  </action>
+  <action name="actionSVRT_20">
+   <property name="text">
+    <string>20</string>
+   </property>
+  </action>
+  <action name="actionSVRT_21">
+   <property name="text">
+    <string>21</string>
+   </property>
+  </action>
+  <action name="actionPSVRT_SD">
+   <property name="text">
+    <string>SD</string>
+   </property>
+  </action>
+  <action name="actionPSVRT_SR">
+   <property name="text">
+    <string>SR</string>
+   </property>
+  </action>
+  <action name="actionRestart">
+   <property name="text">
+    <string>Restart</string>
+   </property>
+  </action>
+  <action name="actionConnect_EyeTracker">
+   <property name="text">
+    <string>Connect EyeTracker</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionReset</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>reset()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSelectDirectory</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>selectDirectory()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonFalse</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>categoryFalse()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>1521</x>
+     <y>1151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButtonTrue</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>categoryTrue()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>493</x>
+     <y>1151</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>639</x>
+     <y>359</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCamRot_1</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuCamRot_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionCamRot_5</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuCamRot_5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRanBoa_1</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuRanBoa_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRanBoa_5</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuRanBoa_5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRotIm_1</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuRotIma_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRotIm_5</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuRotIma_5()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSVRT_1</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuSVRT_1()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSVRT_19</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuSVRT_19()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSVRT_20</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuSVRT_20()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSVRT_21</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuSVRT_21()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPSVRT_SD</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuPSVRT_SD()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionPSVRT_SR</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>menuPSVRT_SR()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionRestart</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>restart()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionConnect_EyeTracker</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>connectEyeTracker()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>959</x>
+     <y>584</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>categoryTrue()</slot>
+  <slot>categoryFalse()</slot>
+  <slot>reset()</slot>
+  <slot>selectDirectory()</slot>
+  <slot>menuCamRot_1()</slot>
+  <slot>menuCamRot_5()</slot>
+  <slot>menuRanBoa_1()</slot>
+  <slot>menuRanBoa_5()</slot>
+  <slot>menuRotIma_1()</slot>
+  <slot>menuRotIma_5()</slot>
+  <slot>menuSVRT_1()</slot>
+  <slot>menuSVRT_5()</slot>
+  <slot>menuSVRT_7()</slot>
+  <slot>menuSVRT_15()</slot>
+  <slot>menuSVRT_19()</slot>
+  <slot>menuSVRT_20()</slot>
+  <slot>menuSVRT_21()</slot>
+  <slot>menuSVRT_22()</slot>
+  <slot>menuPSVRT_SD()</slot>
+  <slot>menuPSVRT_SR()</slot>
+  <slot>restart()</slot>
+  <slot>connectEyeTracker()</slot>
+ </slots>
+</ui>
